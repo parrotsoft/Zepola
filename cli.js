@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-const hellow = require('./index')
-hellow
+const zepola = require('./index')
+zepola

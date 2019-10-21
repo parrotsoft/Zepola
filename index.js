@@ -16,20 +16,43 @@ inquirer.prompt([
     {
         type: 'list',
         name: 'proyecto',
-        message: 'Que lenguaje utilizamos',
-        choices: ['Angular','Laravel','Python']
+        message: 'Que proyecto ?',
+        choices: ['Angular','Laravel']
     }
 ]).then(answers => {
     switch(answers.proyecto) {
         case 'Angular':
-            console.log('Crearemos un proyecto de Angular...')
+            proyectoAngular();
             break;
         case 'Laravel':
-                console.log('Crearemos un proyecto de Laravel...')
-            break;
-        case 'Python':
-            console.log('Crearemos un proyecto de Python...')
+                proyectoLaravel();
             break;
     }
 })
+
+function proyectoAngular() {
+    inquirer.prompt([
+        {
+            type: 'list',
+            name: 'version',
+            message: 'Que version?',
+            choices: ['Angular 2','Angular 4','Angular 5','Angular 6','Angular 7','Angular 8','Angular 9']
+        }
+    ]).then(answers => {
+
+    })
+}
+
+function proyectoLaravel() {
+    inquirer.prompt([
+        {
+            type: 'list',
+            name: 'version',
+            message: 'Que version?',
+            choices: ['Laravel 4','Laravel 5','Laravel 6']
+        }
+    ]).then(answers => {
+
+    })
+}
 
