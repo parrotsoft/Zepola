@@ -7,7 +7,7 @@ const inquirer = require('inquirer');
 
 clear();
 console.log(
-    chalk.yellow(
+    chalk.red(
         figlet.textSync('Zepola', { horizontalLayout: 'full'})
     )
 )
